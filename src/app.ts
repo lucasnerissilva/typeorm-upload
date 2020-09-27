@@ -13,6 +13,10 @@ createConnection();
 const app = express();
 
 app.use(express.json());
+
+import cors from 'cors';
+app.use(cors());
+
 app.use(routes);
 
 app.use((err: Error, request: Request, response: Response, _: NextFunction) => {
